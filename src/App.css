@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #10141e;
+  color: white;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+header p {
+  color: #aab2c0;
+  margin-bottom: 35px;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 14px;
+  border: 1px solid #394150;
+  border-radius: 8px;
+  background: #202735;
+  color: white;
+  font-size: 16px;
+}
+
+.search-box button {
+  padding: 14px 22px;
+  border: none;
+  border-radius: 8px;
+  background: #e50914;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.search-box button:hover {
+  background: #b80710;
+}
+
+.message {
+  margin-top: 35px;
+  color: #aab2c0;
+}
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 24px;
+  max-width: 1100px;
+  margin: 40px auto;
+}
+
+.movie-card {
+  background: #202735;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: left;
+  padding-bottom: 12px;
+}
+
+.movie-card img,
+.no-poster {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+}
+
+.no-poster {
+  display: grid;
+  place-items: center;
+  background: #394150;
+  color: #aab2c0;
+}
+
+.movie-card h3,
+.movie-card p {
+  margin: 10px 12px;
+}
+
+.movie-card h3 {
+  font-size: 17px;
+}
+
+.movie-card p {
+  color: #aab2c0;
+}
+.movie-card {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  z-index: 10;
+}
+
+.modal {
+  position: relative;
+  max-width: 600px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  background: #202735;
+  border-radius: 12px;
+  padding: 28px;
+  text-align: left;
+}
+
+.modal h2 {
+  margin-top: 0;
+}
+
+.modal p {
+  line-height: 1.6;
+  color: #c4cbd6;
+}
+
+.close-button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: none;
+  background: #394150;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.pagination button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #252d3b;
+  color: white;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background: #e50914;
+}
+
+.pagination button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
